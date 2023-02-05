@@ -21,7 +21,6 @@ const saveDataController = async (req, res)=> {
 }
 const saveCompanyScoreController=async(req,res)=>{
     const urlLink = req.body.urlLink
-    console.log(urlLink)
     const saveScore = await services.saveCompanyScore(urlLink)
     res.status(201).send(saveScore)
 }
