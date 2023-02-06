@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
         company_name: DataTypes.STRING,
         ceo_name: DataTypes.STRING,
         tags: DataTypes.ARRAY(DataTypes.STRING),
-        company_score:DataTypes.DECIMAL
+        company_score:DataTypes.DECIMAL,
+        sector: DataTypes.STRING
     }, {
         sequelize,
         modelName: 'Company',

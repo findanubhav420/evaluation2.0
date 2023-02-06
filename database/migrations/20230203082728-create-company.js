@@ -20,6 +20,7 @@ module.exports = {
             },
             tags: Sequelize.ARRAY(Sequelize.STRING),
             company_score: Sequelize.DECIMAL,
+            sector: Sequelize.STRING,
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
