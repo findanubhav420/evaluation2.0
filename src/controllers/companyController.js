@@ -63,4 +63,4 @@ const updateCompanyDataController=async(req,res)=>{
 module.exports = {
     saveDataController,getCompanybySectorController,updateCompanyDataController
 }
-//
+//----
