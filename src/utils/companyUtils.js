@@ -23,12 +23,12 @@ const parseToJSON = async (urlLink) => {
 }
 
 const getData=async (companyId)=>{
-    const data = await axios.get(`http://54.167.46.10/company/${companyId}`)
+    const data = await axios.get(`http://localhost:4000/company/${companyId}`)
     return data.data
 }
 
 const getSectorData=async (company_sector)=>{
-    const data = await axios.get(`http://54.167.46.10/sector?name=${company_sector}`)
+    const data = await axios.get(`http://localhost:4000/sector?name=${company_sector}`)
     return data.data
 }
 

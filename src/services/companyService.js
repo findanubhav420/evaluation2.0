@@ -41,8 +41,12 @@ const getCompanybySector=async (sector)=>{
 }
 
 const updateCompanyData=async(companyId,data)=>{
-    return await Company.update(data,{
+    await Company.update(data,{
         where:{company_id:companyId}
+    })
+    return await Company.findOne({
+        where:{company_id:companyId},
+        attributes:['company_id','company_name','ceo_name','company_score']
     })
 }
 
