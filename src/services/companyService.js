@@ -1,8 +1,6 @@
 const utils = require('../utils/companyUtils')
 const {Company} = require('../../database/models')
 
-
-
 const saveData = async (urlLink) => {
     const companies = await utils.parseToJSON(urlLink)
     for(const company of companies) {
@@ -38,10 +36,7 @@ const getCompanybySector=async (sector)=>{
         where:{sector:sector},
         attributes:['company_id','company_name','ceo_name','company_score']
     })
-    const rankList=response.sort((a,b)=>b.company_score-a.company_score)
-    for(let res of rankList){
-        Object.assign(res.dataValues,{ranking:rankList.indexOf(res)+1})
-    }
+    const rankList=utils.sortList(response)
     return rankList
 }
 
